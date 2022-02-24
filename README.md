@@ -1,19 +1,13 @@
 # kw_locks
 
-Locking resources in KWCMS.
+Locking resources in KWCMS. Process it by files or other storages.
 
 ## PHP Installation
 
 ```
 {
     "require": {
-        "alex-kalanis/kw_locks": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "http",
-            "url":  "https://github.com/alex-kalanis/kw_locks.git"
-        }
+        "alex-kalanis/kw_locks": "1.0"
     }
 }
 ```
