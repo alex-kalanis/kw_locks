@@ -10,7 +10,7 @@ $paths->setDocumentRoot(realpath($_SERVER['DOCUMENT_ROOT']));
 $paths->setPathToSystemRoot('/..');
 
 // init config
-\kalanis\kw_confs\Config::init($paths);
+\kalanis\kw_confs\Config::init(new \kalanis\kw_confs\Loaders\PhpLoader($paths));
 
 // load virtual parts - if exists
 $virtualDir = \kalanis\kw_confs\Config::get('Core', 'site.fake_dir', 'dir_from_config/');
