@@ -93,7 +93,11 @@ class FileLock implements ILock
         }
 
         if (true === $result) {
-            @fwrite($this->handle, strval(getmypid()));
+            $writeStatus = @fwrite($this->handle, strval(getmypid()));
+            if (false === $writeStatus) {
+                fclose($this->handle);
+                return false;
+            }
         }
 
         return $result;

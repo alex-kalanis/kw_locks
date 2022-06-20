@@ -1,11 +1,10 @@
 filter:
   excluded_paths:
     - 'vendor/*'
+    - 'examples/*'
     - 'php-tests/_autoload.php'
     - 'php-tests/_bootstrap.php'
     - 'php-tests/data/*'
-    - 'kw_tests/*'
-    - 'kw_templates/*'
   paths: {  }
 
 build:
@@ -22,13 +21,13 @@ build:
       tests:
         override:
           - php-scrutinizer-run
-    coverage:
-      tests:
-        override:
-          - command: XDEBUG_MODE=coverage ./vendor/bin/phpunit --configuration phpunit.xml --coverage-clover php-tests/data/clover.xml
-            coverage:
-              file:  php-tests/data/clover.xml
-              format: php-clover
+#    coverage:
+#      tests:
+#        override:
+#          - command: XDEBUG_MODE=coverage ./vendor/bin/phpunit --configuration phpunit.xml --coverage-clover php-tests/data/clover.xml
+#            coverage:
+#              file:  php-tests/data/clover.xml
+#              format: php-clover
 
 coding_style:
   php:
