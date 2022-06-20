@@ -19,7 +19,9 @@ class FileLock implements ILock
 {
     /** @var IKLTranslations */
     protected $lang = null;
+    /** @var string */
     protected $lockFilename = '';
+    /** @var resource|null */
     protected $handle = null;
 
     /**
@@ -80,17 +82,18 @@ class FileLock implements ILock
             return false;
         }
 
-        $this->handle = @fopen($this->lockFilename, 'c');
-        if (false === $this->handle) {
+        $handle = @fopen($this->lockFilename, 'c');
+        if (false === $handle) {
             throw new LockException($this->lang->iklCannotOpenFile($this->lockFilename));
         }
+        $this->handle = $handle;
         $result = flock($this->handle, LOCK_EX | LOCK_NB);
         if (false === $result) {
             fclose($this->handle);
         }
 
         if (true === $result) {
-            @fwrite($this->handle, getmypid());
+            @fwrite($this->handle, strval(getmypid()));
         }
 
         return $result;
