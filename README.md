@@ -15,7 +15,7 @@ Locking resources in KWCMS. Process it by files or other storages.
 ```
 {
     "require": {
-        "alex-kalanis/kw_locks": "1.0"
+        "alex-kalanis/kw_locks": "2.0"
     }
 }
 ```
