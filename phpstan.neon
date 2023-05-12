@@ -13,4 +13,4 @@ parameters:
 #	checkGenericClassInNonGenericObjectType: false
 	ignoreErrors:
 		# solved by tests - storage is storage
-		- '#Parameter \#1 \$var of function strval expects bool\|float\|int\|resource\|string\|null\, mixed given\.#'
+		- '#Parameter \#1 \$va[rl]u?e? of function strval expects bool\|float\|int\|resource\|string\|null\, mixed given\.#'
