@@ -23,6 +23,11 @@ class XStorage implements IStorage
         return true;
     }
 
+    public function isFlat(): bool
+    {
+        return true;
+    }
+
     public function write(string $sharedKey, $data, ?int $timeout = null): bool
     {
         if ('off' !== $sharedKey) {
