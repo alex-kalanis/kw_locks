@@ -47,6 +47,7 @@
     <testsuites>
         <testsuite name="ALL">
             <directory>php-tests/BasicTests</directory>
+            <directory>php-tests/TraitsTests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
