@@ -8,7 +8,7 @@
     "license": "BSD-3-Clause",
     "type": "library",
     "require": {
-        "alex-kalanis/kw_paths": ">=2.0",
+        "alex-kalanis/kw_paths": ">=3.0",
         "php": ">=7.2.0"
     },
     "require-dev": {
@@ -21,7 +21,9 @@
         "phpunit/phpunit": ">=7.2 <=9"
     },
     "suggest": {
-        "alex-kalanis/kw_storage": "Local storage for accessing resources"
+        "alex-kalanis/kw_storage": "Local storage for accessing resources",
+        "alex-kalanis/kw_files": "Accessing stored entries as files on some volume",
+        "alex-kalanis/kw_semaphore": "Semaphore for states in KWCMS"
     },
     "autoload": {
         "psr-4": {
